@@ -15,10 +15,10 @@ s.setsockopt(SOL_SOCKET, SO_BROADCAST, 1)
 
 while True:
     pressure = sense.get_pressure()
-    print(pressure)
+    print(round(pressure,1)
     sense.show_message(str(pressure))
     #pressure = round(pressure,1)
-    trykEfterVaegt = pressure - 1002
+    trykEfterVaegt = pressure - 1001
     VaegtIGram = round(400/trykEfterVaegt)
       
     data = "Current time " + str(datetime.now()) + "Weight " + str(VaegtIGram)
