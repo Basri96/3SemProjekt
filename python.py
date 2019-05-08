@@ -16,7 +16,7 @@ s.setsockopt(SOL_SOCKET, SO_BROADCAST, 1)
 while True:
     pressure = sense.get_pressure()
     print(round(pressure,1)
-    sense.show_message(str(pressure))
+    sense.show_message(str(round(pressure,1))
     #pressure = round(pressure,1)
     trykEfterVaegt = pressure - 1001
     VaegtIGram = round(400/trykEfterVaegt)
