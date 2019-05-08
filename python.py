@@ -24,4 +24,4 @@ while True:
     data = "Current time " + str(datetime.now()) + "Weight " + str(VaegtIGram)
     s.sendto(bytes(data, "UTF-8"), ('<broadcast>', BROADCAST_TO_PORT))
     print(data)
-    time.sleep(5)
+    time.sleep(1)
