@@ -19,7 +19,7 @@ while True:
     sense.show_message(str(pressure))
     #pressure = round(pressure,1)
     trykEfterVaegt = pressure - 1002
-    VaegtIGram = 400/trykEfterVaegt
+    VaegtIGram = round(400/trykEfterVaegt)
       
     data = "Current time " + str(datetime.now()) + "Weight " + str(VaegtIGram)
     s.sendto(bytes(data, "UTF-8"), ('<broadcast>', BROADCAST_TO_PORT))
