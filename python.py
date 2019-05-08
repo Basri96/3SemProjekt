@@ -19,9 +19,9 @@ while True:
     sense.show_message(str(round(pressure,1)))
     #pressure = round(pressure,1)
     trykEfterVaegt = (pressure - 1001)
-    print("tryk efter vaegt " + round(trykEfterVaegt,1))
+    print("tryk efter vaegt " + str(round(trykEfterVaegt,1)))
     vaegtIGram = round(400/(trykEfterVaegt))
-    print("vaegt i gram " + round(VaegtIGram,1))
+    print("vaegt i gram " + str(round(vaegtIGram,1)))
     
       
     data = "Current time " + str(datetime.now()) + "Weight " + str(vaegtIGram)
