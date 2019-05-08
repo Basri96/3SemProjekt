@@ -18,10 +18,13 @@ while True:
     print(round(pressure,1))
     sense.show_message(str(round(pressure,1)))
     #pressure = round(pressure,1)
-    trykEfterVaegt = pressure - 1001
-    VaegtIGram = round(400/trykEfterVaegt)
+    trykEfterVaegt = (pressure - 1001)
+    print("tryk efter vaegt " + round(trykEfterVaegt,1))
+    vaegtIGram = round(400/(trykEfterVaegt))
+    print("vaegt i gram " + round(VaegtIGram,1))
+    
       
-    data = "Current time " + str(datetime.now()) + "Weight " + str(VaegtIGram)
+    data = "Current time " + str(datetime.now()) + "Weight " + str(vaegtIGram)
     s.sendto(bytes(data, "UTF-8"), ('<broadcast>', BROADCAST_TO_PORT))
     print(data)
     time.sleep(1)
