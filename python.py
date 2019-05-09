@@ -18,7 +18,7 @@ while True:
     print(round(pressure,1))
     sense.show_message(str(round(pressure,1)))
     #pressure = round(pressure,1)
-    trykEfterVaegt = (pressure - 996.7)
+    trykEfterVaegt = (pressure - 996.8)
     print("tryk efter vaegt " + str(round(trykEfterVaegt,1)))
     vaegtIGram = round((trykEfterVaegt)*300)
     print("vaegt i gram " + str(round(vaegtIGram,1)))
