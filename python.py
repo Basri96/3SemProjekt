@@ -22,11 +22,9 @@ while True:
     print("tryk efter vaegt " + str(round(trykEfterVaegt,1)))
     vaegtIGram = round((trykEfterVaegt)*300)
     print("vaegt i gram " + str(round(vaegtIGram,1)))
-    now = datetime.now()
-    date = now.date()
     
       
-    data = "Current time " + str(date) + "Weight " + str(vaegtIGram)
+    data = "Current time " + str(datetime.now) + "Weight " + str(vaegtIGram)
     s.sendto(bytes(data, "UTF-8"), ('<broadcast>', BROADCAST_TO_PORT))
     print(data)
-    time.sleep(1)
+    time.sleep(10)
