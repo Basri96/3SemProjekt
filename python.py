@@ -20,7 +20,7 @@ while True:
     #pressure = round(pressure,1)
     trykEfterVaegt = (pressure - 996)
     print("tryk efter vaegt " + str(round(trykEfterVaegt,1)))
-    vaegtIGram = round((trykEfterVaegt)*105)
+    vaegtIGram = round(105/(trykEfterVaegt))
     print("vaegt i gram " + str(round(vaegtIGram,1)))
     
       
