@@ -24,7 +24,7 @@ while True:
     print("vaegt i gram " + str(round(vaegtIGram,1)))
     
       
-    data = "Current time " + str(datetime.now()) + "Weight " + str(vaegtIGram)
+    data = "Current time" + " " + str(datetime.now()) + " " + "Weight" + " " + str(vaegtIGram)
     s.sendto(bytes(data, "UTF-8"), ('<broadcast>', BROADCAST_TO_PORT))
     print(data)
     time.sleep(10)
