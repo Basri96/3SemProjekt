@@ -11,8 +11,10 @@ s = socket(AF_INET, SOCK_DGRAM)
 #s.bind(('', 14593))     #(ip, port)
 # no explicit bind: will bind to default IP + random port
 s.setsockopt(SOL_SOCKET, SO_BROADCAST, 1)
-
-pressurecalibration = sense.get_pressure()
+while True:
+    pressurecalibration = sense.get_pressure()
+    if pressurecalibration != 0:
+        break
 while True:
     pressure = sense.get_pressure()
     print(round(pressure,1))
