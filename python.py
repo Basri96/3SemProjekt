@@ -15,6 +15,7 @@ while True:
     pressurecalibration = sense.get_pressure()
     if pressurecalibration >= 950:
         break
+    time.sleep(5)
 while True:
     pressure = sense.get_pressure()
     print(round(pressure,1))
