@@ -24,6 +24,8 @@ while True:
     trykEfterVaegt = (pressure - pressurecalibration)
     print("tryk efter vaegt " + str(round(trykEfterVaegt,1)))
     vaegtIGram = round((trykEfterVaegt)*300)
+    if vaegtIGram < 0:
+        vaegtIGram = 0
     print("vaegt i gram " + str(round(vaegtIGram,1)))
     
       
